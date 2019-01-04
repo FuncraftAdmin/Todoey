@@ -13,6 +13,7 @@ class TodoListViewController: UITableViewController {
     var itemArray = ["chicken","Book CNY", "Truffle"]
     
     let defaults = UserDefaults.standard
+   // let defaults2 = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,14 @@ class TodoListViewController: UITableViewController {
         if let items = defaults.array(forKey: "TodoListArray") as? [String] {
             itemArray = items
         }
+        // setting values to the Local user settings
+//        defaults2.set(0.24, forKey: "Volume")
+//        defaults2.set(true, forKey: "MusicOn")
+//        defaults2.set(Date(), forKey: "AppLastOpenedByUser")
+//        let array = [1,2,3]
+//        defaults2.set(array, forKey: "myArray")
+//        let dictionary = ["name": "Funcraft Admin", "email" : "funcraftye@gmail.com"]
+//        defaults2.set(dictionary, forKey: "myDictionary")
     }
 
     //MARK - TableView Datasource Methods
